@@ -1,0 +1,125 @@
+\doxysection{Database\+Connect.\+php File Reference}
+\hypertarget{DatabaseConnect_8php}{}\label{DatabaseConnect_8php}\index{DatabaseConnect.php@{DatabaseConnect.php}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{DatabaseConnect_8php_a683e7459c616e22ccbf49b41e3a5e093}{Get\+User\+Info}} (\$connection)
+\item 
+\mbox{\hyperlink{DatabaseConnect_8php_a16ac47dd74a0be9304e5abf6d3f5c607}{get\+All\+Users}} (\$connection)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{DatabaseConnect_8php_a0eb82aa5f81cf845de4b36cd653c42cf}{\$username}} = \textquotesingle{}brtnamat\textquotesingle{}
+\item 
+\mbox{\hyperlink{DatabaseConnect_8php_ad9a4bac7bc2ee9018b21bb97dda50a9a}{\$password\+To\+Db}} = \textquotesingle{}webove aplikace\textquotesingle{}
+\item 
+\mbox{\hyperlink{DatabaseConnect_8php_afaef812b1a73e88089d4b7e5e151bc29}{\$address}} = \textquotesingle{}localhost\textquotesingle{}
+\item 
+\mbox{\hyperlink{DatabaseConnect_8php_a1fa3127fc82f96b1436d871ef02be319}{\$db}} = \textquotesingle{}brtnamat\textquotesingle{}
+\item 
+\mbox{\hyperlink{DatabaseConnect_8php_a0d9c79b9b86b3f5891c6d3892f12c6a0}{\$connection}} = new mysqli(\$address, \$username, \$password\+To\+Db, \$db) or die("{}Není připojení k databázi"{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Database connection configuration. 
+
+Definition in file \mbox{\hyperlink{DatabaseConnect_8php_source}{Database\+Connect.\+php}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{DatabaseConnect_8php_a16ac47dd74a0be9304e5abf6d3f5c607}\label{DatabaseConnect_8php_a16ac47dd74a0be9304e5abf6d3f5c607} 
+\index{DatabaseConnect.php@{DatabaseConnect.php}!getAllUsers@{getAllUsers}}
+\index{getAllUsers@{getAllUsers}!DatabaseConnect.php@{DatabaseConnect.php}}
+\doxysubsubsection{\texorpdfstring{getAllUsers()}{getAllUsers()}}
+{\footnotesize\ttfamily get\+All\+Users (\begin{DoxyParamCaption}\item[{}]{\$connection }\end{DoxyParamCaption})}
+
+Retrieves information about all users from the database.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mysqli & {\em \$connection} & The database connection object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array An array containing information about all users. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{DatabaseConnect_8php_source_l00060}{60}} of file \mbox{\hyperlink{DatabaseConnect_8php_source}{Database\+Connect.\+php}}.
+
+\Hypertarget{DatabaseConnect_8php_a683e7459c616e22ccbf49b41e3a5e093}\label{DatabaseConnect_8php_a683e7459c616e22ccbf49b41e3a5e093} 
+\index{DatabaseConnect.php@{DatabaseConnect.php}!GetUserInfo@{GetUserInfo}}
+\index{GetUserInfo@{GetUserInfo}!DatabaseConnect.php@{DatabaseConnect.php}}
+\doxysubsubsection{\texorpdfstring{GetUserInfo()}{GetUserInfo()}}
+{\footnotesize\ttfamily Get\+User\+Info (\begin{DoxyParamCaption}\item[{}]{\$connection }\end{DoxyParamCaption})}
+
+Retrieves information about the currently logged-\/in user.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mysqli & {\em \$connection} & The database connection object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array An array containing user information (username, firstname, secondname, password). 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{DatabaseConnect_8php_source_l00044}{44}} of file \mbox{\hyperlink{DatabaseConnect_8php_source}{Database\+Connect.\+php}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{DatabaseConnect_8php_afaef812b1a73e88089d4b7e5e151bc29}\label{DatabaseConnect_8php_afaef812b1a73e88089d4b7e5e151bc29} 
+\index{DatabaseConnect.php@{DatabaseConnect.php}!\$address@{\$address}}
+\index{\$address@{\$address}!DatabaseConnect.php@{DatabaseConnect.php}}
+\doxysubsubsection{\texorpdfstring{\$address}{\$address}}
+{\footnotesize\ttfamily \$address = \textquotesingle{}localhost\textquotesingle{}}
+
+
+
+Definition at line \mbox{\hyperlink{DatabaseConnect_8php_source_l00024}{24}} of file \mbox{\hyperlink{DatabaseConnect_8php_source}{Database\+Connect.\+php}}.
+
+\Hypertarget{DatabaseConnect_8php_a0d9c79b9b86b3f5891c6d3892f12c6a0}\label{DatabaseConnect_8php_a0d9c79b9b86b3f5891c6d3892f12c6a0} 
+\index{DatabaseConnect.php@{DatabaseConnect.php}!\$connection@{\$connection}}
+\index{\$connection@{\$connection}!DatabaseConnect.php@{DatabaseConnect.php}}
+\doxysubsubsection{\texorpdfstring{\$connection}{\$connection}}
+{\footnotesize\ttfamily \$connection = new mysqli(\$address, \$username, \$password\+To\+Db, \$db) or die("{}Není připojení k databázi"{})}
+
+
+
+Definition at line \mbox{\hyperlink{DatabaseConnect_8php_source_l00036}{36}} of file \mbox{\hyperlink{DatabaseConnect_8php_source}{Database\+Connect.\+php}}.
+
+\Hypertarget{DatabaseConnect_8php_a1fa3127fc82f96b1436d871ef02be319}\label{DatabaseConnect_8php_a1fa3127fc82f96b1436d871ef02be319} 
+\index{DatabaseConnect.php@{DatabaseConnect.php}!\$db@{\$db}}
+\index{\$db@{\$db}!DatabaseConnect.php@{DatabaseConnect.php}}
+\doxysubsubsection{\texorpdfstring{\$db}{\$db}}
+{\footnotesize\ttfamily \$db = \textquotesingle{}brtnamat\textquotesingle{}}
+
+
+
+Definition at line \mbox{\hyperlink{DatabaseConnect_8php_source_l00030}{30}} of file \mbox{\hyperlink{DatabaseConnect_8php_source}{Database\+Connect.\+php}}.
+
+\Hypertarget{DatabaseConnect_8php_ad9a4bac7bc2ee9018b21bb97dda50a9a}\label{DatabaseConnect_8php_ad9a4bac7bc2ee9018b21bb97dda50a9a} 
+\index{DatabaseConnect.php@{DatabaseConnect.php}!\$passwordToDb@{\$passwordToDb}}
+\index{\$passwordToDb@{\$passwordToDb}!DatabaseConnect.php@{DatabaseConnect.php}}
+\doxysubsubsection{\texorpdfstring{\$passwordToDb}{\$passwordToDb}}
+{\footnotesize\ttfamily \$password\+To\+Db = \textquotesingle{}webove aplikace\textquotesingle{}}
+
+
+
+Definition at line \mbox{\hyperlink{DatabaseConnect_8php_source_l00018}{18}} of file \mbox{\hyperlink{DatabaseConnect_8php_source}{Database\+Connect.\+php}}.
+
+\Hypertarget{DatabaseConnect_8php_a0eb82aa5f81cf845de4b36cd653c42cf}\label{DatabaseConnect_8php_a0eb82aa5f81cf845de4b36cd653c42cf} 
+\index{DatabaseConnect.php@{DatabaseConnect.php}!\$username@{\$username}}
+\index{\$username@{\$username}!DatabaseConnect.php@{DatabaseConnect.php}}
+\doxysubsubsection{\texorpdfstring{\$username}{\$username}}
+{\footnotesize\ttfamily \$username = \textquotesingle{}brtnamat\textquotesingle{}}
+
+
+
+Definition at line \mbox{\hyperlink{DatabaseConnect_8php_source_l00012}{12}} of file \mbox{\hyperlink{DatabaseConnect_8php_source}{Database\+Connect.\+php}}.
+

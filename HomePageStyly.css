@@ -1,0 +1,303 @@
+
+
+body{
+    background-image: url("TrailPictures/Background.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family:sans-serif;
+}
+
+header{
+    font-size: 50px;
+    font-family: fantasy;
+    margin: auto;
+    max-width: max-content;
+}
+#Menu{
+    padding: 0;
+
+    float: left;
+    position: fixed;
+    top: 0;
+    left:0;
+    margin: 0;
+    width:15vw;
+    min-width: 100px;
+    border-radius: 10px;
+    list-style-type: none;
+    height: 100%;
+    overflow-y: auto;
+    background-color: #f5e0b4;
+    opacity: 0.95;
+}
+#Menu h1{
+    text-align: center;
+    font-size: 210%;
+
+}
+#Menu h2{
+    margin-left: 10px;
+    width: 85%;
+}
+#Menu a{
+    padding: 10px;
+    color: black;
+    display: block;
+    text-decoration: none;
+    font-size: 120%;
+}
+#Menu a:hover{
+    background-color: white;
+}
+
+.Closed{
+    display: none;
+}
+
+.Opened{
+    display: block;
+}
+
+
+#Reg_Log_Buttons{
+    position: fixed;
+    top: 20px;
+    right: 10px;
+    margin-left: 10px;
+}
+
+.FormButtons, #ZobrazitLokaci, #ZobrazitObtiznost, .RemoveComment, button {
+    padding: 13px;
+    margin-bottom:  5px;
+    margin-left: 5px;
+    width: max-content;
+    border-radius: 6px;
+    border:none;
+    background: rgb(220, 205, 187);
+    font-weight: bold;
+}
+.FormButtons:hover, #ZobrazitLokaci:hover, #ZobrazitObtiznost:hover, .flex-container a:hover, #Odhlaseni:hover,.RemoveComment:hover, button:hover {
+    background: rgb(130, 182, 172);
+    cursor: pointer;
+}
+
+#SpecialFeatures{
+    margin-top: 10px;
+    margin-left: 15px;
+}
+img{
+    max-width: 23vw;
+    max-height: 40vh;
+
+}
+
+.flex-container a{
+    padding: 10px;
+    margin-bottom:  5px;
+    margin-left: 5px;
+    width: max-content;
+    border-radius: 6px;
+    border:none;
+    background: rgb(174, 217, 203);
+    text-decoration: none;
+    color: black;
+}
+
+
+
+div.VyskakovaciForm{
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: rgba(128, 128, 128, 0.53);
+}
+form.VyskakovaciForm, #commentForm{
+    padding: 20px;
+    text-align: center;
+    width: max-content;
+    height: max-content;
+    background-color: white;
+    border-radius: 10px;
+    margin: auto;
+    position: relative;
+    top: 25%;
+}
+form input{
+    margin: 5px;
+    display: inline-block;
+    border:none;
+}
+form input[type=submit]{
+    background: rgba(220, 205, 187, 0.85)
+}
+form input[type=submit]:hover{
+    background: rgba(171, 154, 125, 0.53)
+}
+form input[type=button]{
+    background-color: rgb(243, 170, 170);
+}
+form input[type=button]:hover{
+    background-color: rgb(224, 139, 154);
+}
+form label{
+    font-weight: bold;
+}
+
+form input[type=text],
+form input[type=password]{
+    border: solid 2px;
+    padding: 3px;
+}
+form input[type=button],
+form input[type=submit]{
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+
+main, #commentsList{
+    margin-left: 15vw;
+    margin-top: 2vw;
+}
+.MainBox, #commentsList{
+    background: rgb(255,255,255,0.85);
+    border-radius: 20px;
+    padding:20px;
+    margin-bottom: 20px;
+}
+
+#insideCommentsList{
+    max-height: 500px;
+    overflow-y: scroll;
+}
+
+main h1{
+    text-align: center;
+}
+.TrailImage img{
+    width: 30%;
+}
+.flex-container{
+    display: flex;
+    justify-content: space-around;
+}
+#Main_text{
+    font-size: 3vh;
+}
+
+
+
+
+#commentsHead{
+    text-align: center;
+}
+
+form#commentForm {
+    text-align: center;
+    margin-top: 20px;
+    width: 30vw;
+}
+
+#commentText {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#commentForm input[type="submit"] {
+    background: rgba(220, 205, 187, 0.85);
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+
+}
+
+#commentForm input[type="submit"]:hover {
+    background: rgba(171, 154, 125, 0.53);
+    cursor: pointer;
+}
+
+
+.comment {
+    background-color: rgba(246, 230, 218, 0.88);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    margin: 0 auto 5px;
+    word-wrap: break-word;
+}
+
+
+
+
+
+#dataContainer{
+    display: none;
+}
+
+.errorMessage{
+    color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:630px) {
+    #Reg_Log_Buttons{
+        position: absolute;
+        width: max-content;
+        display: flex;
+        flex-direction: column;
+        padding: 9px;
+        height: max-content;
+        top: 2px;
+    }
+    #Reg_Log_Buttons .FormButtons{
+        margin-bottom: 2px;
+    }
+    main, #commentsList{
+        margin-top: 20px;
+        margin-left: 20vw;
+    }
+    header{
+        left:27vw;
+        margin-top: 5%;
+    }
+}
+
+@media print {
+
+    nav, #Formula,#Reg_Log_Buttons,#commentForm, #ZobrazitLokaci, #ZobrazitObtiznost {
+        display: none;
+    }
+    main, #commentsList {
+        width: 90%;
+        height: 90%;
+        margin: auto;
+    }
+    header{
+        margin: auto;
+    }
+
+}
+
+

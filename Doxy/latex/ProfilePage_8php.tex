@@ -1,0 +1,84 @@
+\doxysection{Profile\+Page.\+php File Reference}
+\hypertarget{ProfilePage_8php}{}\label{ProfilePage_8php}\index{ProfilePage.php@{ProfilePage.php}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{TrailPage_8php_a11c08f6bfb58b1e793b045dbd5451edb}{if}}(isset(\$connection)) \mbox{\hyperlink{TrailPage_8php_a11c08f6bfb58b1e793b045dbd5451edb}{if}}(isset( \$connection)) \mbox{\hyperlink{ProfilePage_8php_a1e34a25993d48a2fe18a032677b2aee1}{count\+Comments}} (\$connection, \$username)
+\item 
+\mbox{\hyperlink{ProfilePage_8php_a2af8add37797384585cae101fb8cbfe7}{get\+Image}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{ProfilePage_8php_a1e34a25993d48a2fe18a032677b2aee1}\label{ProfilePage_8php_a1e34a25993d48a2fe18a032677b2aee1} 
+\index{ProfilePage.php@{ProfilePage.php}!countComments@{countComments}}
+\index{countComments@{countComments}!ProfilePage.php@{ProfilePage.php}}
+\doxysubsubsection{\texorpdfstring{countComments()}{countComments()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{TrailPage_8php_a11c08f6bfb58b1e793b045dbd5451edb}{if}}(isset( \$connection)) \mbox{\hyperlink{TrailPage_8php_a11c08f6bfb58b1e793b045dbd5451edb}{if}}(isset(\$connection)) count\+Comments (\begin{DoxyParamCaption}\item[{}]{\$connection,  }\item[{}]{\$username }\end{DoxyParamCaption})}
+
+Counts the total number of comments for a specific user.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mysqli & {\em \$connection} & The database connection object. \\
+\hline
+string & {\em \$username} & The username for which to count comments. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int The total number of comments for the user. 
+\end{DoxyReturn}
+Rounds total pages number
+
+Definition at line \mbox{\hyperlink{ProfilePage_8php_source_l00133}{133}} of file \mbox{\hyperlink{ProfilePage_8php_source}{Profile\+Page.\+php}}.
+
+\Hypertarget{ProfilePage_8php_a2af8add37797384585cae101fb8cbfe7}\label{ProfilePage_8php_a2af8add37797384585cae101fb8cbfe7} 
+\index{ProfilePage.php@{ProfilePage.php}!getImage@{getImage}}
+\index{getImage@{getImage}!ProfilePage.php@{ProfilePage.php}}
+\doxysubsubsection{\texorpdfstring{getImage()}{getImage()}}
+{\footnotesize\ttfamily get\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieves the path to the user\textquotesingle{}s profile picture.
+
+\begin{DoxyReturn}{Returns}
+string The path to the profile picture. 
+\end{DoxyReturn}
+Gets path to picture
+
+Definition at line \mbox{\hyperlink{ProfilePage_8php_source_l00150}{150}} of file \mbox{\hyperlink{ProfilePage_8php_source}{Profile\+Page.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\textcolor{comment}{//www.w3.org/1999/xhtml"{}>}}
+\DoxyCodeLine{00152\ <head>}
+\DoxyCodeLine{00153\ \ \ \ \ <meta\ charset=\textcolor{stringliteral}{"{}UTF-\/8"{}}>}
+\DoxyCodeLine{00154\ \ \ \ \ <title>TrailSearch</title>}
+\DoxyCodeLine{00155\ \ \ \ \ <link\ rel=\textcolor{stringliteral}{"{}stylesheet"{}}\ href=\textcolor{stringliteral}{"{}HomePageStyly.css"{}}>}
+\DoxyCodeLine{00156\ \ \ \ \ <script\ src=\textcolor{stringliteral}{"{}ProfilePageScript.js"{}}\ defer>\ </script>}
+\DoxyCodeLine{00157\ </head>}
+\DoxyCodeLine{00158\ <body>}
+\DoxyCodeLine{00159\ <header>TrailSearch</header>}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ <nav\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}Menu"{}}>}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \ \ \ \ <h1>Menu</h1>}
+\DoxyCodeLine{00164\ \ \ \ \ <a\ href=\textcolor{stringliteral}{"{}HomePage.php"{}}>Domovská\ stránka</a>}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ \ \ \ \ <h1>Traily</h1>}
+\DoxyCodeLine{00167\ \ \ \ \ <h2>Praha</h2>}
+\DoxyCodeLine{00168\ \ \ \ \ <a\ href=\textcolor{stringliteral}{"{}TrailPage.php?location=Točná\&page=1"{}}>\ Točná</a>}
+\DoxyCodeLine{00169\ \ \ \ \ <a\ href=\textcolor{stringliteral}{"{}TrailPage.php?location=Hodkovičky\&page=1"{}}>\ Hodkovičky</a>}
+\DoxyCodeLine{00170\ \ \ \ \ <h2>Střední\ Čechy</h2>}
+\DoxyCodeLine{00171\ \ \ \ \ <a\ href=\textcolor{stringliteral}{"{}TrailPage.php?location=Roztoky\&page=1"{}}>\ Roztoky</a>}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00173\ \ \ \ \ <h2>Královohradecký\ kraj</h2>}
+\DoxyCodeLine{00174\ \ \ \ \ <a\ href=\textcolor{stringliteral}{"{}TrailPage.php?location=Trutnov\&page=1"{}}>\ Trutnov\ </a>}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \ \ \ \ <h2>Jihočeský\ kraj</h2>}
+\DoxyCodeLine{00177\ \ \ \ \ <a\ href=\textcolor{stringliteral}{"{}TrailPage.php?location=Velhartice\&page=1"{}}>\ Velhartice\ </a>}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00179\ </nav>}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ }
+
+\end{DoxyCode}

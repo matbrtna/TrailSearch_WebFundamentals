@@ -1,0 +1,241 @@
+\doxysection{Post\+Handler.\+php File Reference}
+\hypertarget{PostHandler_8php}{}\label{PostHandler_8php}\index{PostHandler.php@{PostHandler.php}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{PostHandler_8php_ace7bf682d17f6be53b97bd3e81bc01c1}{Remove\+Pic}} ()
+\item 
+\mbox{\hyperlink{PostHandler_8php_ae2398378f2ff4707f023a8652c9e89b5}{Set\+Pic}} ()
+\item 
+\mbox{\hyperlink{PostHandler_8php_aaba879e15a825f60220a64f07d296b3d}{validate\+Login}} (\$username, \$password, \$connection)
+\item 
+\mbox{\hyperlink{PostHandler_8php_afaa9b26165ac81fcc77c183cdee2087a}{validate\+Registration}} (\$username, \$password, \$confirm\+Password, \$first\+Name, \$last\+Name, \$connection)
+\item 
+\mbox{\hyperlink{PostHandler_8php_a683e7459c616e22ccbf49b41e3a5e093}{Get\+User\+Info}} (\$connection)
+\item 
+\mbox{\hyperlink{PostHandler_8php_a16ac47dd74a0be9304e5abf6d3f5c607}{get\+All\+Users}} (\$connection)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{TrailPage_8php_a11c08f6bfb58b1e793b045dbd5451edb}{if}}(isset(\$\+\_\+\+POST\mbox{[}"{}location"{}\mbox{]}) \&\& \$\+\_\+\+POST\mbox{[}\textquotesingle{}location\textquotesingle{}\mbox{]}!=="{}"{}) \mbox{\hyperlink{PostHandler_8php_a92d5e6ba22eb69c0b815248a6b6aae81}{\$username}} = \textquotesingle{}brtnamat\textquotesingle{}
+\item 
+\mbox{\hyperlink{PostHandler_8php_ad9a4bac7bc2ee9018b21bb97dda50a9a}{\$password\+To\+Db}} = \textquotesingle{}webove aplikace\textquotesingle{}
+\item 
+\mbox{\hyperlink{PostHandler_8php_a5544c56adf8c15344b47edef117c966c}{\$adress}} = \textquotesingle{}localhost\textquotesingle{}
+\item 
+\mbox{\hyperlink{PostHandler_8php_a1fa3127fc82f96b1436d871ef02be319}{\$db}} = \textquotesingle{}brtnamat\textquotesingle{}
+\item 
+\mbox{\hyperlink{PostHandler_8php_a0d9c79b9b86b3f5891c6d3892f12c6a0}{\$connection}} = new mysqli(\$adress, \$username, \$password\+To\+Db, \$db) or die("{}Není připojení k databázi"{})
+\item 
+\mbox{\hyperlink{TrailPage_8php_a11c08f6bfb58b1e793b045dbd5451edb}{if}}(( \$\+\_\+\+SERVER\mbox{[}"{}REQUEST\+\_\+\+METHOD"{}\mbox{]}=="{}POST"{}) \&\&isset( \$\+\_\+\+POST\mbox{[}"{}comment\+\_\+submit"{}\mbox{]})) \mbox{\hyperlink{TrailPage_8php_a11c08f6bfb58b1e793b045dbd5451edb}{if}}(isset(\$\+\_\+\+POST\mbox{[}\textquotesingle{}Log\+Out\textquotesingle{}\mbox{]})) \mbox{\hyperlink{PostHandler_8php_ad858339ce00b9e782984850f5d7378d3}{\$validation\+Error}} ="{}"{}
+\item 
+\mbox{\hyperlink{TrailPage_8php_a11c08f6bfb58b1e793b045dbd5451edb}{if}}(\$\+\_\+\+SERVER \mbox{\hyperlink{PostHandler_8php_a47576feeb41c29c58abc8e8f9c063f23}{validation\+Header}} \mbox{[}"{}REQUEST\+\_\+\+METHOD"{}\mbox{]}=="{}POST"{} \&\&isset(\$connection)) \mbox{\hyperlink{TrailPage_8php_a11c08f6bfb58b1e793b045dbd5451edb}{if}}(isset( \$connection) \&\&isset( \$\+\_\+\+POST\mbox{[} \textquotesingle{}Delete\+Comment\textquotesingle{}\mbox{]})) \mbox{\hyperlink{TrailPage_8php_a11c08f6bfb58b1e793b045dbd5451edb}{if}}(isset(\$\+\_\+\+POST\mbox{[}\textquotesingle{}insert\+Pic\textquotesingle{}\mbox{]})) \mbox{\hyperlink{TrailPage_8php_a11c08f6bfb58b1e793b045dbd5451edb}{if}}(isset( \$\+\_\+\+POST\mbox{[} \textquotesingle{}remove\+Pic\textquotesingle{}\mbox{]})) \mbox{\hyperlink{TrailPage_8php_a11c08f6bfb58b1e793b045dbd5451edb}{if}}(isset(\$\+\_\+\+POST\mbox{[}\textquotesingle{}change\+Names\textquotesingle{}\mbox{]})) \mbox{\hyperlink{TrailPage_8php_a11c08f6bfb58b1e793b045dbd5451edb}{if}}(isset( \$\+\_\+\+POST\mbox{[} \textquotesingle{}change\+Passwords\textquotesingle{}\mbox{]}))(\$validation\+Error)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles various actions such as posting comments, logging in, registering, and managing user profiles. 
+
+Definition in file \mbox{\hyperlink{PostHandler_8php_source}{Post\+Handler.\+php}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{PostHandler_8php_a16ac47dd74a0be9304e5abf6d3f5c607}\label{PostHandler_8php_a16ac47dd74a0be9304e5abf6d3f5c607} 
+\index{PostHandler.php@{PostHandler.php}!getAllUsers@{getAllUsers}}
+\index{getAllUsers@{getAllUsers}!PostHandler.php@{PostHandler.php}}
+\doxysubsubsection{\texorpdfstring{getAllUsers()}{getAllUsers()}}
+{\footnotesize\ttfamily get\+All\+Users (\begin{DoxyParamCaption}\item[{}]{\$connection }\end{DoxyParamCaption})}
+
+Retrieves information about all users from the database.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mysqli & {\em \$connection} & -\/ The My\+SQL database connection.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array -\/ Array containing information about all users. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{PostHandler_8php_source_l00398}{398}} of file \mbox{\hyperlink{PostHandler_8php_source}{Post\+Handler.\+php}}.
+
+\Hypertarget{PostHandler_8php_a683e7459c616e22ccbf49b41e3a5e093}\label{PostHandler_8php_a683e7459c616e22ccbf49b41e3a5e093} 
+\index{PostHandler.php@{PostHandler.php}!GetUserInfo@{GetUserInfo}}
+\index{GetUserInfo@{GetUserInfo}!PostHandler.php@{PostHandler.php}}
+\doxysubsubsection{\texorpdfstring{GetUserInfo()}{GetUserInfo()}}
+{\footnotesize\ttfamily Get\+User\+Info (\begin{DoxyParamCaption}\item[{}]{\$connection }\end{DoxyParamCaption})}
+
+Retrieves information about the currently logged-\/in user.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mysqli & {\em \$connection} & -\/ The My\+SQL database connection.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array -\/ Array containing user information (username, first name, last name, password). 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{PostHandler_8php_source_l00378}{378}} of file \mbox{\hyperlink{PostHandler_8php_source}{Post\+Handler.\+php}}.
+
+\Hypertarget{PostHandler_8php_ace7bf682d17f6be53b97bd3e81bc01c1}\label{PostHandler_8php_ace7bf682d17f6be53b97bd3e81bc01c1} 
+\index{PostHandler.php@{PostHandler.php}!RemovePic@{RemovePic}}
+\index{RemovePic@{RemovePic}!PostHandler.php@{PostHandler.php}}
+\doxysubsubsection{\texorpdfstring{RemovePic()}{RemovePic()}}
+{\footnotesize\ttfamily Remove\+Pic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Removes the user\textquotesingle{}s profile picture. 
+
+Definition at line \mbox{\hyperlink{PostHandler_8php_source_l00233}{233}} of file \mbox{\hyperlink{PostHandler_8php_source}{Post\+Handler.\+php}}.
+
+\Hypertarget{PostHandler_8php_ae2398378f2ff4707f023a8652c9e89b5}\label{PostHandler_8php_ae2398378f2ff4707f023a8652c9e89b5} 
+\index{PostHandler.php@{PostHandler.php}!SetPic@{SetPic}}
+\index{SetPic@{SetPic}!PostHandler.php@{PostHandler.php}}
+\doxysubsubsection{\texorpdfstring{SetPic()}{SetPic()}}
+{\footnotesize\ttfamily Set\+Pic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Handles user profile picture upload. 
+
+Definition at line \mbox{\hyperlink{PostHandler_8php_source_l00245}{245}} of file \mbox{\hyperlink{PostHandler_8php_source}{Post\+Handler.\+php}}.
+
+\Hypertarget{PostHandler_8php_aaba879e15a825f60220a64f07d296b3d}\label{PostHandler_8php_aaba879e15a825f60220a64f07d296b3d} 
+\index{PostHandler.php@{PostHandler.php}!validateLogin@{validateLogin}}
+\index{validateLogin@{validateLogin}!PostHandler.php@{PostHandler.php}}
+\doxysubsubsection{\texorpdfstring{validateLogin()}{validateLogin()}}
+{\footnotesize\ttfamily validate\+Login (\begin{DoxyParamCaption}\item[{}]{\$username,  }\item[{}]{\$password,  }\item[{}]{\$connection }\end{DoxyParamCaption})}
+
+Validates user login credentials and sets session variables upon successful login.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$username} & -\/ The entered username. \\
+\hline
+string & {\em \$password} & -\/ The entered password. \\
+\hline
+mysqli & {\em \$connection} & -\/ The My\+SQL database connection.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string -\/ Validation error message, if any. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{PostHandler_8php_source_l00295}{295}} of file \mbox{\hyperlink{PostHandler_8php_source}{Post\+Handler.\+php}}.
+
+\Hypertarget{PostHandler_8php_afaa9b26165ac81fcc77c183cdee2087a}\label{PostHandler_8php_afaa9b26165ac81fcc77c183cdee2087a} 
+\index{PostHandler.php@{PostHandler.php}!validateRegistration@{validateRegistration}}
+\index{validateRegistration@{validateRegistration}!PostHandler.php@{PostHandler.php}}
+\doxysubsubsection{\texorpdfstring{validateRegistration()}{validateRegistration()}}
+{\footnotesize\ttfamily validate\+Registration (\begin{DoxyParamCaption}\item[{}]{\$username,  }\item[{}]{\$password,  }\item[{}]{\$confirm\+Password,  }\item[{}]{\$first\+Name,  }\item[{}]{\$last\+Name,  }\item[{}]{\$connection }\end{DoxyParamCaption})}
+
+Validates user registration details and inserts a new user into the database upon successful validation.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$username} & -\/ The entered username. \\
+\hline
+string & {\em \$password} & -\/ The entered password. \\
+\hline
+string & {\em \$confirm\+Password} & -\/ The entered password confirmation. \\
+\hline
+string & {\em \$first\+Name} & -\/ The entered first name. \\
+\hline
+string & {\em \$last\+Name} & -\/ The entered last name. \\
+\hline
+mysqli & {\em \$connection} & -\/ The My\+SQL database connection.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string -\/ Validation error message, if any. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{PostHandler_8php_source_l00334}{334}} of file \mbox{\hyperlink{PostHandler_8php_source}{Post\+Handler.\+php}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{PostHandler_8php_a5544c56adf8c15344b47edef117c966c}\label{PostHandler_8php_a5544c56adf8c15344b47edef117c966c} 
+\index{PostHandler.php@{PostHandler.php}!\$adress@{\$adress}}
+\index{\$adress@{\$adress}!PostHandler.php@{PostHandler.php}}
+\doxysubsubsection{\texorpdfstring{\$adress}{\$adress}}
+{\footnotesize\ttfamily \$adress = \textquotesingle{}localhost\textquotesingle{}}
+
+
+
+Definition at line \mbox{\hyperlink{PostHandler_8php_source_l00025}{25}} of file \mbox{\hyperlink{PostHandler_8php_source}{Post\+Handler.\+php}}.
+
+\Hypertarget{PostHandler_8php_a0d9c79b9b86b3f5891c6d3892f12c6a0}\label{PostHandler_8php_a0d9c79b9b86b3f5891c6d3892f12c6a0} 
+\index{PostHandler.php@{PostHandler.php}!\$connection@{\$connection}}
+\index{\$connection@{\$connection}!PostHandler.php@{PostHandler.php}}
+\doxysubsubsection{\texorpdfstring{\$connection}{\$connection}}
+{\footnotesize\ttfamily \$connection = new mysqli(\$adress, \$username, \$password\+To\+Db, \$db) or die("{}Není připojení k databázi"{})}
+
+
+
+Definition at line \mbox{\hyperlink{PostHandler_8php_source_l00033}{33}} of file \mbox{\hyperlink{PostHandler_8php_source}{Post\+Handler.\+php}}.
+
+\Hypertarget{PostHandler_8php_a1fa3127fc82f96b1436d871ef02be319}\label{PostHandler_8php_a1fa3127fc82f96b1436d871ef02be319} 
+\index{PostHandler.php@{PostHandler.php}!\$db@{\$db}}
+\index{\$db@{\$db}!PostHandler.php@{PostHandler.php}}
+\doxysubsubsection{\texorpdfstring{\$db}{\$db}}
+{\footnotesize\ttfamily \$db = \textquotesingle{}brtnamat\textquotesingle{}}
+
+
+
+Definition at line \mbox{\hyperlink{PostHandler_8php_source_l00026}{26}} of file \mbox{\hyperlink{PostHandler_8php_source}{Post\+Handler.\+php}}.
+
+\Hypertarget{PostHandler_8php_ad9a4bac7bc2ee9018b21bb97dda50a9a}\label{PostHandler_8php_ad9a4bac7bc2ee9018b21bb97dda50a9a} 
+\index{PostHandler.php@{PostHandler.php}!\$passwordToDb@{\$passwordToDb}}
+\index{\$passwordToDb@{\$passwordToDb}!PostHandler.php@{PostHandler.php}}
+\doxysubsubsection{\texorpdfstring{\$passwordToDb}{\$passwordToDb}}
+{\footnotesize\ttfamily \$password\+To\+Db = \textquotesingle{}webove aplikace\textquotesingle{}}
+
+
+
+Definition at line \mbox{\hyperlink{PostHandler_8php_source_l00024}{24}} of file \mbox{\hyperlink{PostHandler_8php_source}{Post\+Handler.\+php}}.
+
+\Hypertarget{PostHandler_8php_a92d5e6ba22eb69c0b815248a6b6aae81}\label{PostHandler_8php_a92d5e6ba22eb69c0b815248a6b6aae81} 
+\index{PostHandler.php@{PostHandler.php}!\$username@{\$username}}
+\index{\$username@{\$username}!PostHandler.php@{PostHandler.php}}
+\doxysubsubsection{\texorpdfstring{\$username}{\$username}}
+{\footnotesize\ttfamily \mbox{\hyperlink{TrailPage_8php_a11c08f6bfb58b1e793b045dbd5451edb}{if}} (isset( \$\+\_\+\+POST\mbox{[}"{}location"{}\mbox{]}) \&\&\$\+\_\+\+POST\mbox{[} \textquotesingle{}location\textquotesingle{}\mbox{]}!=="{}"{}) \$username = \textquotesingle{}brtnamat\textquotesingle{}}
+
+Sets the global variable \$location if the POST parameter is present and not empty. Database connection values same as database connect Datanase\+Connect not included because headers wont work otherwise 
+
+Definition at line \mbox{\hyperlink{PostHandler_8php_source_l00023}{23}} of file \mbox{\hyperlink{PostHandler_8php_source}{Post\+Handler.\+php}}.
+
+\Hypertarget{PostHandler_8php_ad858339ce00b9e782984850f5d7378d3}\label{PostHandler_8php_ad858339ce00b9e782984850f5d7378d3} 
+\index{PostHandler.php@{PostHandler.php}!\$validationError@{\$validationError}}
+\index{\$validationError@{\$validationError}!PostHandler.php@{PostHandler.php}}
+\doxysubsubsection{\texorpdfstring{\$validationError}{\$validationError}}
+{\footnotesize\ttfamily \mbox{\hyperlink{TrailPage_8php_a11c08f6bfb58b1e793b045dbd5451edb}{if}}((\$\+\_\+\+SERVER\mbox{[}"{}REQUEST\+\_\+\+METHOD"{}\mbox{]}=="{}POST"{}) \&\&isset(\$\+\_\+\+POST\mbox{[}"{}comment\+\_\+submit"{}\mbox{]})) \mbox{\hyperlink{TrailPage_8php_a11c08f6bfb58b1e793b045dbd5451edb}{if}} (isset( \$\+\_\+\+POST\mbox{[} \textquotesingle{}Log\+Out\textquotesingle{}\mbox{]})) \$validation\+Error ="{}"{}}
+
+Checks if the request method is POST and the comment\+\_\+submit button is set. Processes the posted comment and redirects the user to the appropriate page. Checks if the Log\+Out button is set in the POST data. Unsets all known sessions and redirects the user to the appropriate page. 
+
+Definition at line \mbox{\hyperlink{PostHandler_8php_source_l00073}{73}} of file \mbox{\hyperlink{PostHandler_8php_source}{Post\+Handler.\+php}}.
+
+\Hypertarget{PostHandler_8php_a47576feeb41c29c58abc8e8f9c063f23}\label{PostHandler_8php_a47576feeb41c29c58abc8e8f9c063f23} 
+\index{PostHandler.php@{PostHandler.php}!validationHeader@{validationHeader}}
+\index{validationHeader@{validationHeader}!PostHandler.php@{PostHandler.php}}
+\doxysubsubsection{\texorpdfstring{validationHeader}{validationHeader}}
+{\footnotesize\ttfamily \mbox{\hyperlink{TrailPage_8php_a11c08f6bfb58b1e793b045dbd5451edb}{if}}( \$\+\_\+\+SERVER validation\+Header\mbox{[}"{}REQUEST\+\_\+\+METHOD"{}\mbox{]}=="{}POST"{} \&\&isset( \$connection)) \mbox{\hyperlink{TrailPage_8php_a11c08f6bfb58b1e793b045dbd5451edb}{if}}(isset(\$connection) \&\&isset(\$\+\_\+\+POST\mbox{[}\textquotesingle{}Delete\+Comment\textquotesingle{}\mbox{]})) \mbox{\hyperlink{TrailPage_8php_a11c08f6bfb58b1e793b045dbd5451edb}{if}}(isset( \$\+\_\+\+POST\mbox{[} \textquotesingle{}insert\+Pic\textquotesingle{}\mbox{]})) \mbox{\hyperlink{TrailPage_8php_a11c08f6bfb58b1e793b045dbd5451edb}{if}}(isset(\$\+\_\+\+POST\mbox{[}\textquotesingle{}remove\+Pic\textquotesingle{}\mbox{]})) \mbox{\hyperlink{TrailPage_8php_a11c08f6bfb58b1e793b045dbd5451edb}{if}}(isset( \$\+\_\+\+POST\mbox{[} \textquotesingle{}change\+Names\textquotesingle{}\mbox{]})) \mbox{\hyperlink{TrailPage_8php_a11c08f6bfb58b1e793b045dbd5451edb}{if}}(isset(\$\+\_\+\+POST\mbox{[}\textquotesingle{}change\+Passwords\textquotesingle{}\mbox{]}))( \$validation\+Error) (\begin{DoxyParamCaption}\item[{}]{\$validation\+Error }\end{DoxyParamCaption})}
+
+Checks if the Delete\+Comment button is set in the POST data. Deletes the specified comment and redirects the user to the appropriate page. Checks if the insert\+Pic button is set in the POST data. Calls the Set\+Pic function and redirects the user to the appropriate page. Checks if the remove\+Pic button is set in the POST data. Calls the Remove\+Pic function and redirects the user to the appropriate page. Checks if the change\+Passwords button is set in the POST data. Updates the user\textquotesingle{}s password based on the provided values. Redirects the user to the appropriate page. Validates user registration details and inserts a new user into the database upon successful validation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$validation\+Error} & -\/Errors that will be displayed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void -\/ Validation error message, if any. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{PostHandler_8php_source_l00188}{188}} of file \mbox{\hyperlink{PostHandler_8php_source}{Post\+Handler.\+php}}.
+
